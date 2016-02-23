@@ -53,6 +53,10 @@ md-input-container.md-input-has-value label:not(.md-no-float) {
 }
 
 
+.md-button.md-primary.pass-forgot {
+    color: white;
+}
+
 /*MOBILE DEVICES*/
 @media screen and (max-width: 600px) {
 
@@ -83,7 +87,16 @@ md-input-container.md-input-has-value label:not(.md-no-float) {
         color: white;
         font-size: 25px;
         text-transform: uppercase;
+        border-top: 3px solid white;
+        margin-top: 20px;
+    }
+
+    .promo-text-second {
+        border-top: 3px solid white;
         margin-top: 30px;
+        text-transform: uppercase;
+        color: white;
+        font-size: 20px;
     }
 }
 

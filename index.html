@@ -2,7 +2,7 @@
 <html ng-app="IntouchApp" ng-cloack>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>InTouch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -10,39 +10,39 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-<div layout="row" layout-xs="column">
+<div layout="row" ng-controller="StartPageLogoController as startpage" layout-xs="column">
 
-    <md-content flex>
-        <div flex ng-controller="LoadLogoController as logo" layout="row" layout-align="center center">
-            <img src="img/{{logo.src}}">
+    <md-content  flex>
+        <div flex  layout="row" layout-align="center center">
+            <img ng-src="img/{{startpage.src}}">
         </div>
 
         <div flex layout="column" layout-align="center center">
 
-            <p class="greating-first">we are</p>
-
-            <p class="greating-second">coming soon</p>
-
-        </div>
-
-        <div flex layout="column" layout-align="center center">
-
-            <p class="promo-text" style="border-top: 3px solid white; margin-top: 20px;">get in touch</p>
+            <p class="promo-text">sign in</p>
 
             <md-input-container class="md-block">
-                <label>Login</label>
+                <label>Login/E-mail</label>
                 <input ng-model="user.login">
             </md-input-container>
 
             <md-input-container class="md-block" style="margin-top: -10px;">
-                <label>Email</label>
+                <label>Password</label>
                 <input type="email" ng-model="user.email">
             </md-input-container>
 
             <md-button class="md-raised md-primary">
-                <md-icon>send</md-icon>
-                stay in touch
+                <md-icon><i class="material-icons">keyboard_arrow_right</i></md-icon>
+                Sign in
             </md-button>
+
+            <p class="promo-text-second">first time here?</p>
+
+            <md-button ng-click="registrationPage()" class="md-raised md-primary">
+                Quick registration
+            </md-button>
+
+            <md-button ng-click='startpage.passRecowery()' md-no-ink class="md-primary pass-forgot">Forgot password?</md-button>
 
         </div>
     </md-content>
